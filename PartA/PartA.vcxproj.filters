@@ -15,8 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="sc2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="PartA.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PartA.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataList.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
