@@ -74,6 +74,12 @@ _Bool list_searchAndDestroy(linkList *list, void *searchParam, listMatcher cmpr)
 	linkNode *node = list_search(list, searchParam, cmpr);
 	if (node == NULL)
 		return 0;
+	
+	if (list->topNode == node)
+		list->topNode = node->next;
+	if (list->lastNode == node)
+		list->lastNode = node->prev;
+	list->length--;
 	return list_remove(node);
 }
 

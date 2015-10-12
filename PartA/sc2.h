@@ -3,6 +3,9 @@ Simple Console Interface Library v2
 
 by 0nepeop1e
 */
+
+#include <stdbool.h>
+
 #ifndef SIMCON2
 #define SIMCON2
 
