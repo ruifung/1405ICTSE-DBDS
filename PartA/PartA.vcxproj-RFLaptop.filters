@@ -32,9 +32,6 @@
     <ClCompile Include="DataList.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PartAGlobals.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="PartAMenu.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -42,6 +39,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PartAUtil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PartAGlobals.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

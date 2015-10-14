@@ -7,11 +7,11 @@ customer *promptCustomerInput();
 
 #pragma region menu_MAIN
 int actionAddToTop(unsigned int menuIndex) {
-	list_insertTop(&custList, (void *)promptCustomerInput(), &destructCustomer);
+	list_insertTop(&custList, (void *)promptCustomerInput());
 }
 
 int actionAddAtEnd(unsigned int menuIndex) {
-	list_insertEnd(&custList, (void *)promptCustomerInput(), &destructCustomer);
+	list_insertEnd(&custList, (void *)promptCustomerInput());
 }
 
 int actionPrintFromHead(unsigned int menuIndex) {
@@ -44,6 +44,7 @@ int delCustByID(unsigned int index) {
 	bool hasValue = false;
 	char count = 0;
 	while (true) {
+		sc2_clrscr();
 		printf("Delete Customer\n");
 		printf("---------------\n");
 		printf("Customer ID:");
@@ -62,6 +63,7 @@ int delCustByName(unsigned int index) {
 	char *name = NULL;
 	char count = 0;
 	while (true) {
+		sc2_clrscr();
 		printf("Delete Customer\n");
 		printf("---------------\n");
 		printf("Customer Name:");
@@ -80,6 +82,7 @@ int delCustByPartialName(unsigned int index) {
 	char *name = NULL;
 	char count = 0;
 	while (true) {
+		sc2_clrscr();
 		printf("Delete Customer\n");
 		printf("---------------\n");
 		printf("Partial Customer Name:");
@@ -88,7 +91,7 @@ int delCustByPartialName(unsigned int index) {
 		sc2_getStore(name, sc2_getNextLen());
 	}
 	matcherParam param = { match_PARTIALNAME, &name };
-	list_searchAndDestroy(&custList, &param, &matchCustomer);
+	while (list_searchAndDestroy(&custList, &param, &matchCustomer)) {};
 	free(name);
 	menuMode = menu_MAIN;
 	return 1;

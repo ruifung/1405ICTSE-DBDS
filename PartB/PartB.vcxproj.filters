@@ -15,34 +15,37 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sc2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DataList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PartA.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PartA.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DataList.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PartAGlobals.c">
+    <ClCompile Include="PartB.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PartAMenu.c">
+    <ClCompile Include="PartBMenuActions.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PartAMenuActions.c">
+    <ClCompile Include="PartBGlobals.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PartAUtil.c">
+    <ClCompile Include="PartBUtil.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PartBMenu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DataList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PartB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sc2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

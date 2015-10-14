@@ -11,4 +11,3 @@ typedef struct {
 	unsigned int addrLen;
 	char *addr;
 } customer;
-

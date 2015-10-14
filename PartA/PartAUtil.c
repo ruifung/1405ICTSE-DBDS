@@ -25,19 +25,19 @@ void destructCustomer(linkNode *node) {
 }
 
 bool matchCustomer(void *param, void *data) {
-	matcherParam *matchParam = (matcherParam *)param;
+	matcherParam matchParam = *(matcherParam *)param;
 	customer *cust = (customer *)data;
-	switch (matchParam->mode) {
+	switch (matchParam.mode) {
 	case match_ID:
-		return (*(unsigned int *)matchParam->param == cust->id);
+		return (*(unsigned int *)matchParam.param == cust->id);
 	case match_NAME:
-		return strcmp(matchParam->param, cust->name) == 0;
+		return strcmp(matchParam.param, cust->name) == 0;
 	case match_PARTIALNAME:
-		return !!strstr(cust->name, matchParam->param);
+		return !!strstr(cust->name, matchParam.param);
 	case match_ADDR:
-		return strcmp(matchParam->param, cust->addr);
+		return strcmp(matchParam.param, cust->addr);
 	case match_ORDERDESC:
-		return strcmp(matchParam->param, cust->orderDesc);
+		return strcmp(matchParam.param, cust->orderDesc);
 	}
 	return false;
 }

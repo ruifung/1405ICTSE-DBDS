@@ -4,6 +4,8 @@
 
 #include "DataList.h"
 
+void destructCustomer(linkNode *node);
+
 enum matchMode {
 	match_ID,
 	match_NAME,
@@ -23,6 +25,6 @@ typedef struct matcherParam {
 	void *param;
 } matcherParam;
 
-linkList custList = list_empty;
+linkList custList = list_new(&destructCustomer);
 unsigned int itemCount = 0;
 enum menuMode menuMode = menu_MAIN;
