@@ -3,21 +3,24 @@
 #define list_empty list_new(&list_nodeDestructor)
 
 typedef struct linkNode linkNode;
+typedef struct linkList linkList;
 
 typedef _Bool(*listMatcher)(void *searchParam, void* data);
 typedef void(*listNodeConsumer)(struct linkNode *node);
+
 struct linkNode{
+	linkList *list;
+	linkNode *prev;
+	linkNode *next;
 	void *data;
-	struct linkNode *prev;
-	struct linkNode *next;
 };
-typedef struct {
+struct linkList{
 	linkNode *topNode;
 	linkNode *lastNode;
 	unsigned int length;
 	unsigned int maxLength;
 	listNodeConsumer nodeDestructor;
-} linkList;
+};
 
 void list_nodeDestructor(linkNode *node);
 
@@ -28,4 +31,4 @@ void list_iterateReverse(linkList *list, listNodeConsumer action);
 
 linkNode *list_search(linkList *list, void *searchParam, listMatcher cmpr);
 _Bool list_searchAndDestroy(linkList *list, void *searchParam, listMatcher cmpr);
-_Bool list_remove(linkNode *node, listNodeConsumer destructor);
+_Bool list_remove(linkNode *node);

@@ -27,7 +27,7 @@ int actionArriving(int index) {
 		sc2_store();
 
 		theBus->registNumber = malloc(sc2_getNextLen());
-		sc2_getStore(theBus->registNumber, sc2_getNextLen);
+		sc2_getStore(theBus->registNumber, sc2_getNextLen());
 
 		if (verifyRegistNumber(theBus->registNumber))
 			break;
@@ -55,7 +55,7 @@ int actionLeaving(int index) {
 	printf("-----------\n");
 	printBus(theBus);
 
-	list_remove(busQueue.topNode, busQueue.nodeDestructor);
+	list_remove(busQueue.topNode);
 
 	printf("Press any key to continue.");
 	sc2_getkey(true);
@@ -95,13 +95,15 @@ int actionListAll(int index) {
 	printf("----------------------------------------\n");
 	list_iterate(&busQueue, &printBusNode);
 	printf("Press any key to continue.");
-	sc2_getkey;
+	sc2_getkey(true);
+	return 0;
 }
 
 int actionCount(int index) {
 	printf("\nNumber of busses in queue: %d", busQueue.length);
 	printf("Press any key to continue.");
 	sc2_getkey(true);
+	return 0;
 }
 
 int actionExit(int index) {

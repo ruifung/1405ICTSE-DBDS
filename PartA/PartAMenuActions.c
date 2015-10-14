@@ -5,13 +5,16 @@
 
 customer *promptCustomerInput();
 
+
 #pragma region menu_MAIN
 int actionAddToTop(unsigned int menuIndex) {
 	list_insertTop(&custList, (void *)promptCustomerInput());
+	return 0;
 }
 
 int actionAddAtEnd(unsigned int menuIndex) {
 	list_insertEnd(&custList, (void *)promptCustomerInput());
+	return 0;
 }
 
 int actionPrintFromHead(unsigned int menuIndex) {
