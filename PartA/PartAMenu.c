@@ -8,6 +8,7 @@
 #include "PartAGlobals.c"
 #include "PartAMenuActions.c"
 
+//TODO: Customer input verification
 customer *promptCustomerInput() {
 	customer *cust = malloc(sizeof(customer));
 
@@ -62,6 +63,7 @@ int keyHandler(sc2_key key) {
 	else if (sc2_keycmp(key, (sc2_key) { .modifiers.bits = { 0, 0, 1 }, 67 })) {
 
 	}
+	return 0;
 }
 
 void startMenu() {

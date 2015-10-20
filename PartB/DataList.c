@@ -48,6 +48,8 @@ _Bool list_insertEnd(linkList *list, void *data) {
 	}
 	else {
 		node->prev = list->lastNode;
+		node->prev->next = node;
+		list->lastNode = node;
 	}
 	list->length++;
 	node->data = data;
